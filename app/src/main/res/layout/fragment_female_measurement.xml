@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fe"
+    tools:context=".FemaleMeasurementFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <!-- Bust EditText -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:layout_marginBottom="8dp"
+                android:text="chest"
+                android:textColor="#CFB898"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/chest"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="#CFB898" />
+
+            <!-- Waist EditText -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Arm"
+                android:textColor="#CFB898"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/Arm"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+
+                android:textColor="#CFB898" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <!-- Hip EditText -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:layout_marginBottom="8dp"
+                android:text="Shoulder"
+                android:textColor="#CFB898"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/Shoulder"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+
+                android:textColor="#CFB898" />
+
+            <!-- Dress Length EditText -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="8dp"
+                android:text="Dress Length"
+                android:textColor="#CFB898"
+                android:textSize="16sp" />
+
+            <EditText
+
+                android:id="@+id/ShirtLength"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+
+                android:padding="12dp"
+                android:textColor="#CFB898" />
+
+            <!-- Skirt Length EditText -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+
+                android:layout_marginBottom="8dp"
+                android:text=" Trouser Length"
+                android:textColor="#CFB898"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/trouser"
+                android:layout_width="171dp"
+                android:inputType="numberDecimal"
+
+                android:layout_height="34dp"
+                android:padding="12dp"
+                android:textColor="#CFB898" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Exclamation Mark Button for Video Tutorial -->
+    <ImageButton
+        android:id="@+id/videoTutorialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="16dp"
+        android:src="@drawable/ex"
+        android:background="@android:color/transparent" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="50dp"
+        android:layout_marginBottom="12dp"
+        android:text="Submit"
+        android:theme="@style/CustomButton" />
+</FrameLayout>

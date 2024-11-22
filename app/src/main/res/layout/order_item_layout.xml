@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+
+        android:id="@+id/text_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:textStyle="bold" />
+    <TextView
+
+        android:id="@+id/Design_Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Design Coode "
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address" />
+
+    <TextView
+        android:id="@+id/text_estimated_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimated Delivery" />
+
+    <TextView
+        android:id="@+id/text_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price" />
+
+    <!-- Measurements -->
+    <TextView
+        android:id="@+id/text_shirt_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shirt Length" />
+
+    <TextView
+        android:id="@+id/text_shoulder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shoulder" />
+
+    <TextView
+        android:id="@+id/text_sleeves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleeves" />
+
+    <TextView
+        android:id="@+id/text_chest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chest" />
+
+    <TextView
+        android:id="@+id/text_trouser_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trouser Length" />
+
+    <TextView
+        android:id="@+id/text_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Status" />
+
+    <Button
+        android:id="@+id/accept_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/reject_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reject"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/complete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete"
+        android:visibility="gone" />
+
+</LinearLayout>

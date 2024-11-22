@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".homet">
+
+    <!-- Main content -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container">
+
+        <!-- ScrollView for displaying profile and dashboard -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Tailor's Profile Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/profile_background"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/tailorProfileImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/user"
+                        android:scaleType="centerCrop"
+                        android:padding="4dp" />
+
+                    <!-- Tailor Info (Greeting and Email) -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tailorGreeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome back"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:id="@+id/tailorEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="tailor.email@example.com"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="sans-serif" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="16dp">
+
+                    <!-- First Row: Total Earnings and Order Requests -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <!-- Total Earnings -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="154dp"
+                            app:itemIconTint="#FF9800"
+
+
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/stat_card_background"
+                            android:elevation="6dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="Total Earnings Icon"
+                                android:src="@drawable/earn" />
+
+                            <TextView
+                                android:id="@+id/textTotalEarnings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PKR 0"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Earnings"
+
+                                android:textColor="#FF9800"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <!-- Order Requests -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="156dp"
+                            app:itemIconTint="#FF9800"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/stat_card_background"
+                            android:elevation="6dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/req"
+                                android:contentDescription="Order Requests Icon" />
+
+                            <TextView
+                                android:id="@+id/textOrderRequests"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order Requests"
+                                android:textColor="#FF9800"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Second Row: Active Orders and Completed Orders -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:gravity="center_horizontal">
+
+                        <!-- Active Orders -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="158dp"
+                            app:itemIconTint="#FF9800"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/stat_card_background"
+                            android:elevation="6dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/iconm"
+                                android:contentDescription="Active Orders Icon" />
+
+                            <TextView
+                                android:id="@+id/textActiveOrders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active Orders"
+                                android:textColor="#FF9800"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <!-- Completed Orders -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="156dp"
+                            app:itemIconTint="#FF9800"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/stat_card_background"
+                            android:elevation="6dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/comp"
+                                android:contentDescription="Completed Orders Icon" />
+
+                            <TextView
+                                android:id="@+id/textCompletedOrders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Completed Orders"
+                                android:textColor="#FF9800"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <!-- Bottom Navigation View -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/round_navigation"
+            app:itemIconSize="24dp"
+            app:itemIconTint="#FF9800"
+            app:itemTextColor="#FF9800"
+            app:menu="@menu/tailor_bottom_nav_menu" />
+    </FrameLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+
+        app:menu="@menu/navigation_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

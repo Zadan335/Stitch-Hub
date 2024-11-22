@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <resources>
+<!-- Define custom IDs for use in layout files -->
+<item name="tailorFragmentContainer" type="id" />
+<item name="tailorBottomNavigationView" type="id" />
+<item name="textViewHeading" type="id" />
+<item name="fragmentContainer" type="id" />
+
+
+    </resources>

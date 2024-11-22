@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:background="@drawable/regt2"
+    tools:context=".RegisterStep2Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:padding="16dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7">
+
+        <!-- Address TextInputEditText -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addressLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Address"
+            android:paddingTop="12dp"
+            app:boxBackgroundColor="#FDE1B9"
+            app:hintTextColor="#E48C0E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColorHint="#000000"
+            app:layout_constraintWidth_percent="0.8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#000000"
+                android:textColor="#E48C0E" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Latitude TextInputEditText -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/latitudeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter Latitude"
+            android:paddingTop="12dp"
+            app:boxBackgroundColor="#FDE1B9"
+            app:hintTextColor="#E48C0E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColorHint="#000000"
+            app:layout_constraintTop_toBottomOf="@id/addressLayout"
+            app:layout_constraintWidth_percent="0.8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColorHint="#000000"
+                android:textColor="#E48C0E" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Longitude TextInputEditText -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/longitudeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter Longitude"
+            android:paddingTop="12dp"
+            app:boxBackgroundColor="#FDE1B9"
+            app:hintTextColor="#E48C0E"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/latitudeLayout"
+            app:layout_constraintWidth_percent="0.8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#000000"
+                android:inputType="numberDecimal"
+                android:textColor="#E48C0E" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Get Current Location Button -->
+        <Button
+            android:id="@+id/buttonGetCurrentLocation"
+            style="@style/CustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Get Current Location"
+            android:textColor="#E48C0E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/longitudeLayout"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/CustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Next"
+            android:textColor="#E48C0E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonGetCurrentLocation"
+            app:layout_constraintWidth_percent="0.8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

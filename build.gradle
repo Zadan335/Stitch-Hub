@@ -1,0 +1,17 @@
+buildscript {
+    dependencies {
+        classpath libs.google.services // Referring to google services from the version catalog
+    }
+}
+
+plugins {
+    alias(libs.plugins.androidApplication) apply false // Reference to the Android Application plugin from the version catalog
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+
+        }
+    }

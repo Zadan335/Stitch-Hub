@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme without ActionBar -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Disable ActionBar and title -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Enable full screen (optional) -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- Customize your theme colors -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <!-- Alternative theme (AppThem1) -->
+    <style name="AppThem1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/buttonColor</item> <!-- Custom button background color -->
+        <item name="cornerRadius">8dp</item> <!-- Optional: Rounded corners -->
+        <item name="android:textColor">@android:color/white</item> <!-- Button text color -->
+    </style>
+    <style name="CustomButton2" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/black</item> <!-- Custom button background color -->
+        <item name="cornerRadius">8dp</item> <!-- Optional: Rounded corners -->
+        <item name="android:textColor">@android:color/black</item> <!-- Button text color -->
+    </style>
+
+</resources>

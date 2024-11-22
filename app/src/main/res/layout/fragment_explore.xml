@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Explore">
+
+    <!-- Fancy Heading "Explore Tailors" -->
+    <TextView
+        android:id="@+id/explore_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore Tailors"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="5dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- MapView below the heading with rounded corners -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToOutline="true"
+        android:elevation="10dp"
+        android:background="@drawable/map_background_rounded"
+        app:layout_constraintTop_toBottomOf="@id/explore_heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintHeight_percent="0.75"/>
+
+    <!-- Bottom Navigation with added padding, rounded background, and better spacing -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_navigation"
+        android:elevation="8dp"
+        android:layout_marginBottom="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:itemIconSize="24dp"
+        app:itemIconTint="#FF9800"
+        app:itemTextColor="#FF9800"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
